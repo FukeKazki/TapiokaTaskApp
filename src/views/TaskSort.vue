@@ -28,12 +28,8 @@
             <h3>ソート結果</h3>
 
             <ul class="bar">
-                <li v-for="task in $store.state.task" :key="task.id">
+                <li v-for="task in this.sortedArray" :key="task.id">
                     <p>タスク名: {{ task.name }}</p>
-<!--                    <p>期限: {{ task.dedLine }}</p>-->
-<!--                    <p>必要な時間: {{ task.usingTime }}</p>-->
-<!--                    <p>場所: {{ task.place }}</p>-->
-<!--                    <p>気分: {{ task.feeling }}</p>-->
                 </li>
             </ul>
 
@@ -66,12 +62,8 @@
                 this.freeTime = '';
             },
             onsort() {
-                // console.log(this.$store.state.now);
-                // console.log(this.$store.state.place);
-                // console.log(this.$store.state.feeling);
-
                 this.sortedArray = sort({time: this.$store.state.now, place: this.$store.state.place, feeling: this.$store.state.feeling}, this.$store.state.freeTime, this.$store.state.task);
-                console.table(this.sortedArray);
+                // console.table(this.sortedArray);
             }
         },
     }
