@@ -19,7 +19,7 @@
 
 
             <h3>場所</h3>
-            <input type="text" v-model="place" class="box6">
+            <input type="text" v-model="tmpPlace" class="box6" @change="setPlace">
 
 
             <div>
@@ -49,11 +49,17 @@
               feeling: 'Good',
               start: '',
               end: '',
+              tmpPlace: '',
           };
         },
         methods: {
+            setPlace: function() {
+              this.place.push(this.tmpPlace);
+            },
             onsubmit: function () {
-                this.times = [{start: this.start, end: this.end}];
+                if(this.start !== '' && this.end !== '') {
+                    this.times = [{start: this.start, end: this.end}];
+                }
                 // difficultyの処理
                 if(this.times !== []) {
                     this.difficulty++;
@@ -68,15 +74,18 @@
                 // console.log('times:' + this.times + ' place: ' + this.place + ' feeling: ' + this.feeling);
                 // console.table(this.times);
                 // console.table(this.place);
+                // console.table(this.times);
                 this.$store.commit('addTask', {
                     name: this.name,
-                    dedLine: this.dedLine,
+                    dedLine: new Date(this.dedLine),
                     difficulty: this.difficulty,
-                    usingTime: this.usingTime,
+                    usingTime: Number(this.usingTime),
                     times: this.times,
                     place: this.place,
                     feeling: this.feeling,
+                    // isActive: false,
                 });
+                // console.table(this.$store.state.task);
                 this.name = '';
                 this.dedLine = '';
                 this.difficulty = 0;

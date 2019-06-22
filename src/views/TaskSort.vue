@@ -28,7 +28,8 @@
             <h3>ソート結果</h3>
 
             <ul class="bar">
-                <li v-for="task in this.sortedArray" :key="task.id" v-if="!task.isActive">
+<!--                <li v-for="task in this.sortedArray" :key="task.id" v-if="!task.isActive">-->
+                <li v-for="task in noActiveTask" :key="task.id">
                     <p @click="task.isActive = true">タスク名: {{ task.name }}</p>
                 </li>
             </ul>
@@ -50,6 +51,17 @@
                 sortedArray: [],
             };
         },
+        computed: {
+            noActiveTask: function() {
+                let newArray = [];
+                this.sortedArray.forEach((el) => {
+                   // console.log(el);
+                   if(el.isActive) { return true;}
+                   newArray.push(el);
+                });
+                return newArray;
+            },
+        },
         methods: {
             onsubmit() {
                 this.$store.commit('nowFeeling', {
@@ -63,7 +75,7 @@
             },
             onsort() {
                 this.sortedArray = sort({time: this.$store.state.now, place: this.$store.state.place, feeling: this.$store.state.feeling}, this.$store.state.freeTime, this.$store.state.task);
-                // console.table(this.sortedArray);
+                console.table(this.sortedArray);
             },
         },
     }

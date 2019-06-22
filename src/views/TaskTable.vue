@@ -2,9 +2,9 @@
     <div>
         <h1>This is TaskTable page</h1>
         <ul>
-            <li v-for="task in $store.state.task" :key="task.id" v-if="task.isActive">
+            <li v-for="task in ActiveTask" :key="task.id">
                 <label :for="task.name">{{ task.name }}</label>
-                <input type="checkbox" :id="task.name" :value="task.name" v-model="checkedId">
+                <input type="checkbox" :id="task.name" :value="task.id" v-model="checkedId">
             </li>
         </ul>
         <button @click="test">test</button>
@@ -20,10 +20,24 @@
               checkedId: [],
           }
         },
+        computed: {
+            ActiveTask: function() {
+                let newArray = [];
+                this.$store.state.task.forEach((el) => {
+                    // console.log(el);
+                    if(el.isActive) { newArray.push(el); }
+                    return true;
+                });
+                return newArray;
+            },
+        },
         methods: {
             test: function(){
                 console.log(this.checkedId);
-            }
+            },
+            delete: function() {
+
+            },
         }
     }
 </script>
