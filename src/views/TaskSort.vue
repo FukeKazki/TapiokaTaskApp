@@ -20,7 +20,7 @@
 
         <h3>ソートボタン</h3>
 
-        <button type="submit" @click="sort1"><img src="../assets/icon1.png" width="70" height="70" class="rotate-anime"></button>
+        <button type="submit" @click="onsort"><img src="../assets/icon1.png" width="70" height="70" class="rotate-anime"></button>
 
 
 
@@ -42,6 +42,8 @@
 </template>
 
 <script>
+    import sort from '../algorithm';
+
     export default {
         name: "TaskSort",
         data: function () {
@@ -49,6 +51,7 @@
                 place: '',
                 feeling: 'Good',
                 freeTime: '',
+                sortedArray: [],
             };
         },
         methods: {
@@ -62,6 +65,14 @@
                 this.feeling = '';
                 this.freeTime = '';
             },
+            onsort() {
+                // console.log(this.$store.state.now);
+                // console.log(this.$store.state.place);
+                // console.log(this.$store.state.feeling);
+
+                this.sortedArray = sort({time: this.$store.state.now, place: this.$store.state.place, feeling: this.$store.state.feeling}, this.$store.state.freeTime, this.$store.state.task);
+                console.table(this.sortedArray);
+            }
         },
     }
 </script>

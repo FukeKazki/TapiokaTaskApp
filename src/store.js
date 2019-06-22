@@ -123,6 +123,9 @@ export default new Vuex.Store({
         state.feeling = obj.feeling;
         state.freeTime = obj.freeTime;
     },
+      // deleteTask (state, obj) {
+      //
+      // },
   },
   actions: {
 
