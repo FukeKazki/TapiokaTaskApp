@@ -4,7 +4,8 @@
       <router-link to="/">Home</router-link> |
 <!--      <router-link to="/about">About</router-link> |-->
       <router-link to="/form">Form</router-link> |
-      <router-link to="/task-sort">TaskSort</router-link>
+      <router-link to="/task-sort">TaskSort</router-link> |
+      <router-link to="task-table">TaskTable</router-link>
     </div>
     <router-view/>
   </div>

@@ -31,5 +31,10 @@ export default new Router({
       name: 'task-sort',
       component: () => import('./views/TaskSort.vue')
     },
+    {
+      path: '/task-table',
+      name: 'task-table',
+      component: () => import('./views/TaskTable.vue')
+    },
   ]
 })
