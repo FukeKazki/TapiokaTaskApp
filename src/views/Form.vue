@@ -20,7 +20,7 @@
                     <option value="Bad">Bad</option>
                 </select>
             </div>
-            <button @click="onsubmit">送信</button>
+            <button @click="onsubmit" class="submit-button">送信</button>
         </div>
     </div>
 </template>
@@ -82,5 +82,13 @@
 </script>
 
 <style scoped>
-
+.submit-button {
+    padding: .5em 1em;
+    color: #FFF;
+    background: #03A9F4;/*色*/
+    border: solid 1px #0f9ada;/*線色*/
+    border-radius: 4px;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.2);
+    text-shadow: 0 1px 0 rgba(0,0,0,0.2);
+}
 </style>
