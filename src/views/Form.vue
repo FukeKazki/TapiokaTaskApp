@@ -37,7 +37,7 @@
                 this.name = '';
                 this.end = '';
                 this.difficulty = '';
-                this.condition = [];
+                this.conditions = [];
             },
         }
     }
