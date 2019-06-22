@@ -23,7 +23,7 @@
               name: '',
               end: '',
               difficulty: '',
-              condition: [],
+              conditions: [],
           };
         },
         methods: {
@@ -32,7 +32,7 @@
                     name: this.name,
                     end: this.end,
                     difficulty: this.difficulty,
-                    condition: this.condition,
+                    conditions: this.conditions,
                 });
                 this.name = '';
                 this.end = '';
