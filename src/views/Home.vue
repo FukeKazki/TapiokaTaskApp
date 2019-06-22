@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <h1></h1>
+    <h1>トップページ</h1>
     <ul>
       <li v-for="task in $store.state.task" :key="task.id">
         <p>タスク名: {{ task.name }}</p>
