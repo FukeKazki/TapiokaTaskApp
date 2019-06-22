@@ -22,6 +22,7 @@ export default new Vuex.Store({
         ],
         place: ['福岡'],
         feeling: 'Good',
+        isActive: false
       },
       {
           id: 2,
@@ -35,6 +36,7 @@ export default new Vuex.Store({
           ],
           place: ['北九州高専'],
           feeling: 'Bad',
+          isActive: true
       },
       {
           id: 3,
@@ -48,6 +50,7 @@ export default new Vuex.Store({
           ],
           place: ['北九州高専'],
           feeling: 'Bad',
+          isActive: false
       },
         {
             id: 4,
@@ -58,6 +61,7 @@ export default new Vuex.Store({
             times: [],
             place: [],
             feeling: 'Bad',
+            isActive: false
         },
         {
             id: 5,
@@ -68,6 +72,7 @@ export default new Vuex.Store({
             times: [],
             place: ['北九州高専'],
             feeling: 'Good',
+            isActive: false
         },
         {
             id: 6,
@@ -78,6 +83,7 @@ export default new Vuex.Store({
             times: [],
             place: [],
             feeling: 'Good',
+            isActive: false
         },
         {
             id: 7,
@@ -88,6 +94,7 @@ export default new Vuex.Store({
             times: [],
             place: [],
             feeling: 'Good',
+            isActive: false
         },
         {
             id: 8,
@@ -98,7 +105,69 @@ export default new Vuex.Store({
             times: [],
             place: [],
             feeling: 'Good',
+            isActive: true
         },
+        {
+          id: 9,
+          name: '先生へのメール',
+          dedLine: new Date(2019, 5, 30),
+          difficulty: 1,
+          usingTime: 10,
+          times: [],
+          place: [],
+          feeling: 'Bad',
+          isActive: true
+      },
+      {
+        id: 10,
+        name: 'インターンのネット面接',
+        dedLine: new Date(2019, 5, 30),
+        difficulty: 2,
+        usingTime: 30,
+        times: [
+          {start:'14:30',end:'19:00'}
+        ],
+        place: [],
+        feeling: 'Bad',
+        isActive: false
+    },
+    {
+      id: 11,
+      name: '企業訪問',
+      dedLine: new Date(2020, 3, 28),
+      difficulty: 3,
+      usingTime: 180,
+      times: [
+        {start:'9:30',end:'19:00'}
+      ],
+      place: ['東京'],
+      feeling: 'Bad',
+      isActive: false
+  },
+  {
+    id: 12,
+    name: '散髪',
+    dedLine: new Date(2019, 6, 1),
+    difficulty: 2,
+    usingTime: 60,
+    times: [
+      {start:'9:30',end:'19:00'}
+    ],
+    place: [],
+    feeling: 'Good',
+    isActive: false
+  },
+  {
+    id: 13,
+    name: '大熱血アセンブラ入門 の購入',
+    dedLine: new Date(2019, 8, 2),
+    difficulty: 0,
+    usingTime: 5,
+    times: [],
+    place: [],
+    feeling: 'Good',
+    isActive: true
+  }
     ],
   },
   mutations: {
