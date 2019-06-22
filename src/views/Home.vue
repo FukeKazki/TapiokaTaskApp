@@ -1,27 +1,30 @@
 <template>
 
   <div class="home">
-
-<!--    <center>-->
-     <div class='box'>
-       <div class='wave -one'></div>
-       <div class='wave -two'></div>
-  
-        <ul>
-          <li v-for="task in $store.state.task" :key="task.id"  class="tapioka">
-            <div>{{ task.name }}</div>
-<!--            <div >期限: {{ task.end }}</div>-->
-<!--            <div >難易度: {{ task.difficulty }}</div>-->
-<!--            <div >コンディション: {{ task.conditions }}</div>-->
-          </li>
-        </ul>
-
-
-      <div class='wave -three'></div>
-
-    </div>
-<!--    </center>-->
-
+      <div class="left">
+          <div class='box'>
+              <div class='wave -one'></div>
+              <div class='wave -two'></div>
+              <ul>
+                  <li v-for="(task, index) in $store.state.task" :key="task.id" v-if="index < 5"  class="tapioka">
+                      <div>{{ task.name }}</div>
+                  </li>
+              </ul>
+              <div class='wave -three'></div>
+          </div>
+      </div>
+      <div class="right">
+          <div class='box'>
+              <div class='wave -one'></div>
+              <div class='wave -two'></div>
+              <ul>
+                  <li v-for="(task, index) in $store.state.task" :key="task.id" v-if="index >= 5"  class="tapioka">
+                      <div>{{ task.name }}</div>
+                  </li>
+              </ul>
+              <div class='wave -three'></div>
+          </div>
+      </div>
 <!--    <img alt="Vue logo" src="../assets/logo.png">-->
 <!--    <HelloWorld msg="Welcome to Your Vue.js App"/>-->
   </div>
@@ -43,20 +46,6 @@ export default {
 
 
 <style scoped>
-  li {
-    list-style: none;
-    border: 1px solid #4d4d4d;
-    margin-top: 1em;
-     border-radius: 50%;
-     width: 200px;
-     height: 200px;
-  }
-
-li {
-    display: inline-block;
-    margin: 20px;
-}
-
 li:nth-child(odd) {
     -webkit-animation: horizontal1 1s ease-in-out infinite alternate;
 }
@@ -68,13 +57,14 @@ li {
     text-decoration: none;
     display: block;
     text-align: center;
-    width: 200px;
-    height: 200px;
-    line-height: 200px;
+    width: 150px;
+    height: 150px;
+    line-height: 150px;
     border-radius: 200px;
     background: #444;
     color: #fff;
     -webkit-animation: vertical 1s ease-in-out infinite alternate;
+    margin: 20px auto 20px auto;
 }
 
 li:nth-child(1) a {
@@ -89,12 +79,12 @@ li:nth-child(3) a {
 
 
 @-webkit-keyframes horizontal1 {
-    0% { -webkit-transform:translateX( -3px); }
+    0% { -webkit-transform:translateX( -20px); }
   100% { -webkit-transform:translateX(  0px); }
 }
 
 @-webkit-keyframes horizontal2 {
-    0% { -webkit-transform:translateX(  3px); }
+    0% { -webkit-transform:translateX(  20px); }
   100% { -webkit-transform:translateX(  0px); }
 }
 
@@ -103,29 +93,21 @@ li:nth-child(3) a {
   100% { -webkit-transform:translateY(  0px); }
 }
 
-
-
-
-html, body {
-  height: 100%;
-}
-
-html {
-  background: #eee;
-}
-
 body {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+.home {
+    display: flex;
+    width: 1000px;
+    margin: 0 auto;
+}
+
 .box {
-  width: 400px;
-  /*height: 800px;*/
-  border-radius: 5px;
-  /*box-shadow: 0 2px 30px rgba(black, .2);*/
-  /*background: lighten(#f0f4c3, 10%);*/
+    padding: 0 1em;
+  width: 500px;
   position: relative;
   overflow: hidden;
   transform: translate3d(0, 0, 0);
