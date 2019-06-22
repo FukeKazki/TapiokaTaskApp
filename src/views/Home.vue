@@ -3,7 +3,7 @@
     <h1>トップページ</h1>
     <ul>
       <li v-for="task in $store.state.task" :key="task.id">
-        <p>タスク名: {{ task.name }}</p>
+        <p class="p1"> タスク名: {{ task.name }}</p>
         <p>期限: {{ task.end }}</p>
         <p>難易度: {{ task.difficulty }}</p>
         <p>コンディション: {{ task.conditions }}</p>
@@ -32,4 +32,10 @@ export default {
     border: 1px solid #4d4d4d;
     margin-top: 1em;
   }
+.p1 {
+  color:red;
+}
+
+
+
 </style>
