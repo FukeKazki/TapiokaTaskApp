@@ -30,7 +30,18 @@ export default new Vuex.Store({
     ],
   },
   mutations: {
-
+    addTask (state, obj) {
+        state.task = [
+            ...state.task,
+            {
+                id: state.task.length + 1,
+                name: obj.name,
+                end: obj.end,
+                difficulty: obj.difficulty,
+                conditions: obj.conditions,
+            },
+        ];
+    },
   },
   actions: {
 
