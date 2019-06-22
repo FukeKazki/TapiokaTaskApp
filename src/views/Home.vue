@@ -2,25 +2,25 @@
 
   <div class="home">
 
-    <center>
+<!--    <center>-->
      <div class='box'>
        <div class='wave -one'></div>
        <div class='wave -two'></div>
   
-    <ul>
-      <li v-for="task in $store.state.task" :key="task.id"  class="tapioka">
-        <dev > タスク名: {{ task.name }}</dev>
-        <dev >期限: {{ task.end }}</dev>
-        <dev >難易度: {{ task.difficulty }}</dev>
-        <dev >コンディション: {{ task.conditions }}</dev>
-      </li>
-    </ul>
+        <ul>
+          <li v-for="task in $store.state.task" :key="task.id"  class="tapioka">
+            <div>{{ task.name }}</div>
+<!--            <div >期限: {{ task.end }}</div>-->
+<!--            <div >難易度: {{ task.difficulty }}</div>-->
+<!--            <div >コンディション: {{ task.conditions }}</div>-->
+          </li>
+        </ul>
 
 
       <div class='wave -three'></div>
 
-</div>
-    </center>
+    </div>
+<!--    </center>-->
 
 <!--    <img alt="Vue logo" src="../assets/logo.png">-->
 <!--    <HelloWorld msg="Welcome to Your Vue.js App"/>-->
@@ -122,13 +122,14 @@ body {
 
 .box {
   width: 400px;
-  height: 800px;
+  /*height: 800px;*/
   border-radius: 5px;
-  box-shadow: 0 2px 30px rgba(black, .2);
-  background: lighten(#f0f4c3, 10%);
+  /*box-shadow: 0 2px 30px rgba(black, .2);*/
+  /*background: lighten(#f0f4c3, 10%);*/
   position: relative;
   overflow: hidden;
   transform: translate3d(0, 0, 0);
+  margin: 0 auto;
 }
 
 .wave {
@@ -163,7 +164,7 @@ body {
   top: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, rgba(#e8a, 1), rgba(#def, 0) 80%, rgba(white, .5));
+  /*background: linear-gradient(to bottom, rgba(#e8a, 1), rgba(#def, 0) 80%, rgba(white, .5));*/
   z-index: 11;
   transform: translate3d(0, 0, 0);
 }
