@@ -6,13 +6,18 @@
                 <span>{{ task.name }}</span><input type="checkbox">
             </li>
         </ul>
+<!--        <button @click="delete">削除</button>xz-->
     </div>
 </template>
 
 <script>
     export default {
         name: "TaskTable",
-
+        data: function() {
+          return {
+              checkedId: [],
+          }
+        },
     }
 </script>
 
