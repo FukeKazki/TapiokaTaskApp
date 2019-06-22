@@ -28,8 +28,8 @@
             <h3>ソート結果</h3>
 
             <ul class="bar">
-                <li v-for="task in this.sortedArray" :key="task.id">
-                    <p>タスク名: {{ task.name }}</p>
+                <li v-for="task in this.sortedArray" :key="task.id" v-if="!task.isActive">
+                    <p @click="task.isActive = true">タスク名: {{ task.name }}</p>
                 </li>
             </ul>
 
@@ -64,7 +64,7 @@
             onsort() {
                 this.sortedArray = sort({time: this.$store.state.now, place: this.$store.state.place, feeling: this.$store.state.feeling}, this.$store.state.freeTime, this.$store.state.task);
                 // console.table(this.sortedArray);
-            }
+            },
         },
     }
 </script>
