@@ -5,6 +5,10 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+      now: '',
+      place: '',
+      feeling: '',
+      freeTime: '',
     task: [
       {
         id: 1,
@@ -62,6 +66,12 @@ export default new Vuex.Store({
                 feeling: obj.feeling,
             },
         ];
+    },
+      nowFeeling (state, obj) {
+        state.now = new Date();
+        state.place = obj.place;
+        state.feeling = obj.feeling;
+        state.freeTime = obj.freeTime;
     },
   },
   actions: {
