@@ -9,8 +9,8 @@ export default new Vuex.Store({
       {
         id: 1,
         name: 'ハッカソン',
-        end: new Date(2019, 5, 22),
-        difficulty: 1,
+        dedLine: new Date(2019, 5, 22),
+        difficulty: 2,
         usingTime: 200,
         times: [
             {start: '9:30', end: '11:30'},
@@ -22,8 +22,8 @@ export default new Vuex.Store({
       {
           id: 2,
           name: 'レポート',
-          end: new Date(2019, 5, 24),
-          difficulty: 1,
+          dedLine: new Date(2019, 5, 24),
+          difficulty: 3,
           usingTime: 400,
           times: [
               {start: '9:30', end: '11:30'},
@@ -35,8 +35,8 @@ export default new Vuex.Store({
       {
           id: 3,
           name: 'テスト',
-          end: new Date(2019, 5, 30),
-          difficulty: 1,
+          dedLine: new Date(2019, 5, 30),
+          difficulty: 3,
           usingTime: 900,
           times: [
               {start: '9:30', end: '11:30'},
@@ -54,9 +54,12 @@ export default new Vuex.Store({
             {
                 id: state.task.length + 1,
                 name: obj.name,
-                end: obj.end,
+                dedLine: obj.dedLine,
                 difficulty: obj.difficulty,
-                conditions: obj.conditions,
+                usingTime: obj.usingTime,
+                times: obj.times,
+                place: obj.place,
+                feeling: obj.feeling,
             },
         ];
     },
