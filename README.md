@@ -1,5 +1,6 @@
 # タスク管理アプリ
-タピオカUIでタスク管理
+タピオカUIでタスク管理<br>
+> プレゼンスライド: https://www.icloud.com/keynote/0APB-uMarf3PUkmwhQWS5GCRQ#TaskAdviser
 ## 機能
 - **タスクの追加**   
     form画面からタスクの追加ができる.    
