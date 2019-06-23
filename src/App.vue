@@ -13,8 +13,9 @@
             <router-link to="task-table">TaskTable</router-link>
         </div>
 
-
-        <router-view/>
+        <transition name="page">
+            <router-view/>
+        </transition>
     </div>
 </template>
 
@@ -62,7 +63,14 @@
 .box17:before {left: 10px;}
 .box17:after {right: 10px;}
 .box17 p {
-    margin: 0; 
+    margin: 0;
     padding: 0;
 }
+    .page-enter-active, .page-leave-active {
+        transition: opacity 1s, transform 1s;
+    }
+    .page-enter, .page-leave-to {
+        opacity: 0;
+        transform: translateX(-30%);
+    }
 </style>
