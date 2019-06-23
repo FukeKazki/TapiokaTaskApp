@@ -1,6 +1,6 @@
 module.exports = {
-    baseUrl: process.env.NODE_ENV === 'production'
-        ? '/tapioka-task-app/'
+    publicPath: process.env.NODE_ENV === 'production'
+        ? '/TapiokaTaskApp/'
         : '/',
     outputDir: 'docs',
 };
