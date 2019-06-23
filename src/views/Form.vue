@@ -103,6 +103,10 @@
 </script>
 
 <style scoped>
+    .form {
+        height: 100vh;
+    }
+
     .submit-button {
         padding: .5em 1em;
         color: #FFF;

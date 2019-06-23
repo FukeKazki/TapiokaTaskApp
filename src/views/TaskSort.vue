@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="task-sort">
 
         <div>
             <h3>場所</h3>
@@ -89,6 +89,10 @@
 </script>
 
 <style scoped>
+    .task-sort {
+        height: 100vh;
+    }
+
     li {
         list-style: none;
     }
