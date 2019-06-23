@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="task-table">
         <h1>This is TaskTable page</h1>
         <ul>
             <li v-for="task in ActiveTask" :key="task.id">
@@ -48,5 +48,9 @@
 <style scoped>
     li {
         list-style: none;
+    }
+
+    .task-table {
+        min-height: 100vh;
     }
 </style>
