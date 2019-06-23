@@ -7,8 +7,8 @@
                 <input type="checkbox" :id="task.name" :value="task.id" v-model="checkedId">
             </li>
         </ul>
-        <button @click="test">test</button>
-<!--        <button @click="delete">削除</button>xz-->
+<!--        <button @click="test">test</button>-->
+        <button @click="deleteTask">削除</button>
     </div>
 </template>
 
@@ -35,8 +35,10 @@
             test: function(){
                 console.log(this.checkedId);
             },
-            delete: function() {
-
+            deleteTask: function() {
+                this.$store.commit('deleteTask', {
+                    id: this.checkedId,
+                });
             },
         }
     }

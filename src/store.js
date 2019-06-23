@@ -193,9 +193,16 @@ export default new Vuex.Store({
             state.feeling = obj.feeling;
             state.freeTime = obj.freeTime;
         },
-        // deleteTask (state, obj) {
-        //
-        // },
+        deleteTask (state, obj) {
+            state.task.forEach((task, index, array) => {
+                for(let i = 0; i < obj.id.length; i++) {
+                    if(task.id === obj.id[i]) {
+                        array.splice(index, 1);
+                    }
+                }
+            });
+            console.table(state.task);
+        },
     },
     actions: {}
 })
