@@ -5,13 +5,13 @@
             <h3>場所</h3>
             <input type="text" placeholder="場所" v-model="place" class="box">
 
-            <h3>気分</h3>
+            <h3>今の気分</h3>
             <select name="" id="" v-model="feeling" class="select">
                 <option value="Good" selected>Good</option>
                 <option value="Bad">Bad</option>
             </select>
 
-            <h3>暇な時間</h3>
+            <h3>今から利用出来る時間の長さ</h3>
             <input type="number" v-model="freeTime" class="input free-time-input">分
 
             <button type="submit" @click="onsubmit"><img src="../assets/icon2.png" width="50" height="50" class="bar">

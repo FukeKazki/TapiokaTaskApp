@@ -5,7 +5,7 @@
             <input type="text" placeholder="タスク名" v-model="name" class="box25">
 
 
-            <h3>*期限</h3>
+            <h3>*タスクの締め切り期限</h3>
             <input type="date" v-model="dedLine" class="box25">
 
 
@@ -13,17 +13,17 @@
             <input type="number" v-model="usingTime" class="box25">分
 
 
-            <h3>期間</h3>
+            <h3>できる時間帯</h3>
             <span>開始</span><input type="time" v-model="start" class="box5">
             <span>終了</span><input type="time" v-model="end" class="box5">
 
 
-            <h3>場所</h3>
+            <h3>できる場所</h3>
             <input type="text" v-model="tmpPlace" class="box6" @change="setPlace">
 
 
             <div>
-                <h3>*Feeling</h3>
+                <h3>*このタスクに対する印象</h3>
                 <select name="" id="" v-model="feeling" class="box15">
                     <option value="Good" selected>Good</option>
                     <option value="Bad">Bad</option>
