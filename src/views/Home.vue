@@ -27,13 +27,15 @@
             </div>
         </div>
 
+
         <div class="popup" v-if="isShow">
             <h2>{{ TaskName }}</h2>
-            <p>期限: {{ TaskDedLine }}</p>
-            <p>必要な時間: {{ TaskUsingTime }} 分</p>
-            <p>場所: {{ TaskPlace !== [] ? TaskPlace[0] : '指定なし' }}</p>
-            <p>タスクの印象: {{ TaskFeeling }}</p>
+            <p class="popupline">期限: {{ TaskDedLine }}</p>
+            <p class="popupline">必要な時間: {{ TaskUsingTime }} 分</p>
+            <p class="popupline">場所: {{ TaskPlace !== [] ? TaskPlace[0] : '指定なし' }}</p>
+            <p class="popupline">タスクの印象: {{ TaskFeeling }}</p>
         </div>
+
 
     </div>
 
@@ -264,15 +266,36 @@
     .home {
         position: relative;
     }
+
+    
     .popup {
-        border: 1px solid #4d4d4d;
+        border: 3px solid #FF5F17;
         background: #fff;
         position: absolute;
         width: 300px;
         height: 300px;
         top: 100px;
-        left: 50%;
+        left: 39%;
         transform: translateX(-50%);
         z-index: 999;
     }
+    .popupline {
+  border-bottom: dashed 1px #FF5F17;
+  position: relative;
+  padding: 0.5em 0.5em 0.5em 10px;
+  line-height: 1.0em;
+    }
+
+.popup{
+  animation: popup_9955 3s linear infinite;
+  transform-origin: 50% 50%;
+  margin: 1rem 0   !important;
+}
+ 
+@keyframes popup_9955 {
+  0% { transform: translateY(0) }
+  33.33333% { transform: translateY(-10px) }
+  66.66667% { transform: translateY(0) }
+  100% { transform: translateY(0) }
+}
 </style>
