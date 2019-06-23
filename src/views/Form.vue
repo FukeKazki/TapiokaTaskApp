@@ -24,12 +24,14 @@
 
             <div>
                 <h3>*Feeling</h3>
-                <select name="" id="" v-model="feeling"  class="box15">
+                <select name="" id="" v-model="feeling" class="box15">
                     <option value="Good" selected>Good</option>
                     <option value="Bad">Bad</option>
                 </select>
-            </div><br>
-            <button @click="onsubmit" type="submit"><img src="../assets/icon3.png" width="70" height="70" class="rotate-anime"></button>
+            </div>
+            <br>
+            <button @click="onsubmit" type="submit"><img src="../assets/icon3.png" width="70" height="70"
+                                                         class="rotate-anime"></button>
         </div>
 
     </div>
@@ -39,35 +41,35 @@
     export default {
         name: "Form",
         data: function () {
-          return {
-              name: '',
-              dedLine: '',
-              difficulty: 0,
-              usingTime: 0,
-              times: [],
-              place: [],
-              feeling: 'Good',
-              start: '',
-              end: '',
-              tmpPlace: '',
-          };
+            return {
+                name: '',
+                dedLine: '',
+                difficulty: 0,
+                usingTime: 0,
+                times: [],
+                place: [],
+                feeling: 'Good',
+                start: '',
+                end: '',
+                tmpPlace: '',
+            };
         },
         methods: {
-            setPlace: function() {
-              this.place.push(this.tmpPlace);
+            setPlace: function () {
+                this.place.push(this.tmpPlace);
             },
             onsubmit: function () {
-                if(this.start !== '' && this.end !== '') {
+                if (this.start !== '' && this.end !== '') {
                     this.times = [{start: this.start, end: this.end}];
                 }
                 // difficultyの処理
-                if(this.times !== []) {
+                if (this.times !== []) {
                     this.difficulty++;
                 }
-                if(this.place !== []) {
+                if (this.place !== []) {
                     this.difficulty++;
                 }
-                if(this.feeling === 'Bad') {
+                if (this.feeling === 'Bad') {
                     this.difficulty++;
                 }
                 // console.log('名前:' + this.name + ' 期限: ' + this.dedLine + ' difficulty: ' + this.difficulty + ' usingTime: ' + this.usingTime);
@@ -101,99 +103,109 @@
 </script>
 
 <style scoped>
-.submit-button {
-    padding: .5em 1em;
-    color: #FFF;
-    background: #03A9F4;/*色*/
-    border: solid 1px #0f9ada;/*線色*/
-    border-radius: 4px;
-    box-shadow: inset 0 1px 0 rgba(255,255,255,0.2);
-    text-shadow: 0 1px 0 rgba(0,0,0,0.2);
-}
+    .submit-button {
+        padding: .5em 1em;
+        color: #FFF;
+        background: #03A9F4; /*色*/
+        border: solid 1px #0f9ada; /*線色*/
+        border-radius: 4px;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
+        text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+    }
 
 
-
-.box25{
-    position: relative;
-    background: #fff0cd;
-    box-shadow: 0px 0px 0px 5px #fff0cd;
-    border: dashed 2px white;
-    padding: 0.2em  0.5em;
-    color: #454545;
+    .box25 {
+        position: relative;
+        background: #fff0cd;
+        box-shadow: 0px 0px 0px 5px #fff0cd;
+        border: dashed 2px white;
+        padding: 0.2em 0.5em;
+        color: #454545;
         font-size: 25px;
-}
-.box25:after{
-    position: absolute;
-    content: '';
-    right: -7px;
-    top: -7px;
-    border-width: 0 15px 15px 0;
-    border-style: solid;
-    border-color: #ffdb88 #fff #ffdb88;
-    box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.15);
-}
-.box25 p {
-    margin: 0; 
-    padding: 0;
-}
-.box5 {
-    padding: 0.5em 1em;
-    margin: 2em 0.5;
-    border: double 5px #4ec4d3;
-    font-size: 25px;
-}
+    }
 
-.box17{
-    margin:2em 0;
-    position: relative;
-    padding: 0.5em 1.5em;
-    border-top: solid 2px black;
-    border-bottom: solid 2px black;
-}
-.box6 {
-    padding: 0.5em 0em;
-    margin: 0em 0;
-    background: #FDFFFE;
-    border: dashed 6px #C1F9DD;/*点線*/
-    font-size: 25px;
-}
-.box6 p {
-    margin: 0; 
-    padding: 0;
-}
+    .box25:after {
+        position: absolute;
+        content: '';
+        right: -7px;
+        top: -7px;
+        border-width: 0 15px 15px 0;
+        border-style: solid;
+        border-color: #ffdb88 #fff #ffdb88;
+        box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.15);
+    }
 
-.box15 {
-    padding: 0.2em 0.5em;
-    margin: 0em 0;
-    color: #565656;
-    background: #ffeaea;
-    box-shadow: 0px 0px 0px 10px #ffeaea;
-    border: dashed 2px #ffc3c3;
-    border-radius: 8px;
-    font-size: 25px;
-}
-.box15 p {
-    margin: 0; 
-    padding: 0;
-}
+    .box25 p {
+        margin: 0;
+        padding: 0;
+    }
 
+    .box5 {
+        padding: 0.5em 1em;
+        margin: 2em 0.5;
+        border: double 5px #4ec4d3;
+        font-size: 25px;
+    }
 
-button {
-  padding: 0;
-  border: none;
-  background: transparent;
-}
+    .box17 {
+        margin: 2em 0;
+        position: relative;
+        padding: 0.5em 1.5em;
+        border-top: solid 2px black;
+        border-bottom: solid 2px black;
+    }
 
-button img {
-  display: block;
-}
+    .box6 {
+        padding: 0.5em 0em;
+        margin: 0em 0;
+        background: #FDFFFE;
+        border: dashed 6px #C1F9DD; /*点線*/
+        font-size: 25px;
+    }
+
+    .box6 p {
+        margin: 0;
+        padding: 0;
+    }
+
+    .box15 {
+        padding: 0.2em 0.5em;
+        margin: 0em 0;
+        color: #565656;
+        background: #ffeaea;
+        box-shadow: 0px 0px 0px 10px #ffeaea;
+        border: dashed 2px #ffc3c3;
+        border-radius: 8px;
+        font-size: 25px;
+    }
+
+    .box15 p {
+        margin: 0;
+        padding: 0;
+    }
 
 
-.rotate-anime {
-  animation: rotate-anime 3s linear infinite;
-}
-@keyframes rotate-anime {
-  0%  {transform: rotate(0);}
-  100%  {transform: rotate(360deg);}
-}
+    button {
+        padding: 0;
+        border: none;
+        background: transparent;
+    }
+
+    button img {
+        display: block;
+    }
+
+
+    .rotate-anime {
+        animation: rotate-anime 3s linear infinite;
+    }
+
+    @keyframes rotate-anime {
+        0% {
+            transform: rotate(0);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
 </style>
