@@ -12,7 +12,7 @@
             </select>
 
             <h3>今から利用出来る時間の長さ</h3>
-            <input type="number" v-model="freeTime" class="input free-time-input">分
+            <input type="number" v-model="freeTime" class="input free-time-input">&emsp;分
 
             <button type="submit" @click="onsubmit"><img src="../assets/icon2.png" width="50" height="50" class="bar">
             </button>
@@ -187,7 +187,8 @@
         box-shadow: 0px 0px 0px 10px #d6ebff;
         border: dashed 2px white;
         height: 40px;
-        font-size: 20px;
+        font-size: 30px;
+        width: 90px;
     }
 
 </style>

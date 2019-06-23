@@ -10,12 +10,12 @@
 
 
             <h3>*必要な時間</h3>
-            <input type="number" v-model="usingTime" class="box25">分
+            <input type="number" v-model="usingTime" class="box25">&ensp;分
 
 
             <h3>できる時間帯</h3>
-            <span>開始</span><input type="time" v-model="start" class="box5">
-            <span>終了</span><input type="time" v-model="end" class="box5">
+            <span>開始&nbsp;</span><input type="time" v-model="start" class="box5">&nbsp;
+            <span>終了&nbsp;</span><input type="time" v-model="end" class="box5">
 
 
             <h3>できる場所</h3>
