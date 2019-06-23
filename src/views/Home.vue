@@ -4,24 +4,26 @@
             <div class='box'>
                 <div class='wave -one' :class="{fullcolor: isFull}"></div>
                 <div class='wave -two' :class="{fullcolor: isFull}"></div>
+                <div class='wave -three'></div>
                 <ul>
                     <li v-for="task in TaskLessThan" :key="task.id" class="tapioka" @click="TaskClick($event)">
                         <div>{{ task.name }}</div>
                     </li>
                 </ul>
-                <div class='wave -three'></div>
+                
             </div>
         </div>
         <div class="right">
             <div class='box'>
                 <div class='wave -one' :class="{fullcolor: isFull}"></div>
                 <div class='wave -two' :class="{fullcolor: isFull}"></div>
+                <div class='wave -three'></div>
                 <ul>
                     <li v-for="task in TaskMoreThan" :key="task.id" class="tapioka" @click="TaskClick($event)">
                         <div>{{ task.name }}</div>
                     </li>
                 </ul>
-                <div class='wave -three'></div>
+                
             </div>
         </div>
 
@@ -195,10 +197,10 @@
         top: 3%;
         left: 50%;
         background: #FAEAC9;
-        width: 500px;
-        height: 600px;
-        margin-left: -250px;
-        margin-top: -250px;
+        width: 1000px;
+        height: 1000px;
+        margin-left: -500px;
+        margin-top: -100px;
         transform-origin: 50% 48%;
         border-radius: 43%;
         animation: drift 3000ms infinite linear;
@@ -208,6 +210,8 @@
     .wave.-three {
         animation: drift 5000ms infinite linear;
         /*z-index: -99;*/
+        width: 1000px;
+        height: 1000px;
     }
 
     .wave.-two {
@@ -215,6 +219,8 @@
         opacity: .1;
         background: yellow;
         /*z-index: -99;*/
+        width: 1000px;
+        height: 1000px;
 
     }
     .fullcolor {
