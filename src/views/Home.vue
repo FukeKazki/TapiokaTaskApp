@@ -78,13 +78,13 @@
                 return newArray;
             },
             isFull: function () {
-                console.log(this.$store.state.task.length);
+                // console.log(this.$store.state.task.length);
                 return this.$store.state.task.length > 10;
             }
         },
         methods: {
             TaskClick (event) {
-                console.log(event.target.outerText);
+                // console.log(event.target.outerText);
                 this.$store.state.task.forEach(el => {
                     if(el.name === event.target.outerText) {
                         this.TaskName = el.name;

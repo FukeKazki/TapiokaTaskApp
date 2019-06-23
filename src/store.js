@@ -201,7 +201,7 @@ export default new Vuex.Store({
                     }
                 }
             });
-            console.table(state.task);
+            // console.table(state.task);
         },
     },
     actions: {}

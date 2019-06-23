@@ -82,7 +82,7 @@
                     place: this.$store.state.place,
                     feeling: this.$store.state.feeling
                 }, this.$store.state.freeTime, this.$store.state.task);
-                console.table(this.sortedArray);
+                // console.table(this.sortedArray);
             },
         },
     }

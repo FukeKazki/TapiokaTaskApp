@@ -34,7 +34,7 @@
         },
         methods: {
             test: function () {
-                console.log(this.checkedId);
+                // console.log(this.checkedId);
             },
             deleteTask: function () {
                 this.$store.commit('deleteTask', {

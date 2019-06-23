@@ -93,6 +93,6 @@ export default (condition,availableTime,task) => {
         }
         if(nothing)break;
     }
-    console.log(result);
+    // console.log(result);
     return result;
 }
