@@ -13,6 +13,8 @@
               <div class='wave -three'></div>
           </div>
       </div>
+
+
       <div class="right">
           <div class='box'>
               <div class='wave -one'></div>
@@ -25,6 +27,8 @@
               <div class='wave -three'></div>
           </div>
       </div>
+
+      
 <!--    <img alt="Vue logo" src="../assets/logo.png">-->
 <!--    <HelloWorld msg="Welcome to Your Vue.js App"/>-->
   </div>
@@ -120,7 +124,7 @@ body {
   top: 3%;
   left: 50%;
   background: #FAEAC9;
-  width: 500px;
+  width: 600px;
   height: 600px;
   margin-left: -250px;
   margin-top: -250px;
