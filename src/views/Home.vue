@@ -1,5 +1,4 @@
 <template>
-
     <div class="home">
         <div class="left">
             <div class='box'>
@@ -35,6 +34,7 @@
         </div>
 
     </div>
+
 
 </template>
 
