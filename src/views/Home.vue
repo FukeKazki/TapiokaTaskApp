@@ -199,10 +199,10 @@
         top: 3%;
         left: 50%;
         background: #FAEAC9;
-        width: 1000px;
-        height: 1000px;
-        margin-left: -500px;
-        margin-top: -100px;
+        width: 800px;
+        height: 800px;
+        margin-left: -400px;
+        margin-top: -150px;
         transform-origin: 50% 48%;
         border-radius: 43%;
         animation: drift 3000ms infinite linear;
@@ -212,8 +212,8 @@
     .wave.-three {
         animation: drift 5000ms infinite linear;
         /*z-index: -99;*/
-        width: 1000px;
-        height: 1000px;
+        width: 800px;
+        height: 800px;
     }
 
     .wave.-two {
@@ -221,8 +221,8 @@
         opacity: .1;
         background: yellow;
         /*z-index: -99;*/
-        width: 1000px;
-        height: 1000px;
+        width: 800px;
+        height: 800px;
 
     }
     .fullcolor {
