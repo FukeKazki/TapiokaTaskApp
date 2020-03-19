@@ -1,7 +1,12 @@
 # タスク管理アプリ
-タピオカUIでタスク管理<br>
-> URL: https://fukekazki.github.io/TapiokaTaskApp/  
-> プレゼンスライド: https://www.icloud.com/keynote/0APB-uMarf3PUkmwhQWS5GCRQ#TaskAdviser
+!['タイトル'](./images/screenshot.png)
+
+<p align='center'>URL: https://fukekazki.github.io/TapiokaTaskApp/</p>
+
+## Description
+ハックツハッカソンでのプロダクトです.  
+タピオカUIでタスク管理！！  
+
 ## 機能
 - **タスクの追加**   
     form画面からタスクの追加ができる.    
@@ -77,6 +82,3 @@ yarn run test
 ```
 yarn run lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
